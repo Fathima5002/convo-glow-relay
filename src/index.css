@@ -2,95 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* WhatsApp-inspired Design System */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core WhatsApp colors */
+    --background: 150 5% 96%;
+    --foreground: 210 11% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 11% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 11% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* WhatsApp teal/green */
+    --primary: 162 73% 46%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 150 10% 92%;
+    --secondary-foreground: 210 11% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 150 5% 90%;
+    --muted-foreground: 210 6% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 150 10% 88%;
+    --input: 150 10% 88%;
+    --ring: 162 73% 46%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Chat-specific colors */
+    --chat-bg: 150 18% 90%;
+    --chat-pattern: 150 10% 85%;
+    --bubble-sent: 162 73% 46%;
+    --bubble-sent-foreground: 0 0% 100%;
+    --bubble-received: 0 0% 100%;
+    --bubble-received-foreground: 210 11% 15%;
+    --bubble-reply: 150 20% 94%;
+    --online: 142 76% 36%;
+    --important: 45 93% 47%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 11% 15%;
+    --sidebar-primary: 162 73% 46%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 10% 95%;
+    --sidebar-accent-foreground: 210 11% 15%;
+    --sidebar-border: 150 10% 88%;
+    --sidebar-ring: 162 73% 46%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 210 11% 10%;
+    --foreground: 150 5% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 11% 13%;
+    --card-foreground: 150 5% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 11% 13%;
+    --popover-foreground: 150 5% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 162 73% 46%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 11% 18%;
+    --secondary-foreground: 150 5% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 11% 20%;
+    --muted-foreground: 150 5% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 142 76% 40%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 210 11% 20%;
+    --input: 210 11% 20%;
+    --ring: 162 73% 46%;
+
+    /* Chat dark mode */
+    --chat-bg: 210 11% 8%;
+    --chat-pattern: 210 11% 12%;
+    --bubble-sent: 162 60% 35%;
+    --bubble-sent-foreground: 0 0% 100%;
+    --bubble-received: 210 11% 18%;
+    --bubble-received-foreground: 150 5% 96%;
+    --bubble-reply: 210 11% 22%;
+
+    --sidebar-background: 210 11% 10%;
+    --sidebar-foreground: 150 5% 96%;
+    --sidebar-primary: 162 73% 46%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 210 11% 15%;
+    --sidebar-accent-foreground: 150 5% 96%;
+    --sidebar-border: 210 11% 20%;
+    --sidebar-ring: 162 73% 46%;
   }
 }
 
@@ -100,6 +116,92 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Chat background pattern */
+  .chat-bg {
+    background-color: hsl(var(--chat-bg));
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--chat-pattern) / 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--chat-pattern) / 0.3) 0%, transparent 50%);
+  }
+
+  /* Message bubbles */
+  .bubble-sent {
+    @apply bg-[hsl(var(--bubble-sent))] text-[hsl(var(--bubble-sent-foreground))] rounded-2xl rounded-br-md;
+  }
+
+  .bubble-received {
+    @apply bg-[hsl(var(--bubble-received))] text-[hsl(var(--bubble-received-foreground))] rounded-2xl rounded-bl-md shadow-sm;
+  }
+
+  /* Smooth animations */
+  .message-enter {
+    animation: messageSlide 0.3s ease-out;
+  }
+
+  @keyframes messageSlide {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.3);
+      opacity: 0;
+    }
+  }
+
+  .recording-pulse::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: hsl(var(--destructive) / 0.4);
+    animation: pulse-ring 1s ease-out infinite;
+  }
+
+  /* Reaction badge */
+  .reaction-badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs bg-card shadow-sm border;
+  }
+
+  /* Important star */
+  .important-star {
+    @apply text-[hsl(var(--important))] drop-shadow-sm;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
   }
 }
