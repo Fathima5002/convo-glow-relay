@@ -4,6 +4,10 @@ A production-ready, WhatsApp-inspired messaging application built with a focus o
 
 The app simulates real-time messaging between two fixed users with independent message states, modern chat features, and a familiar UI.
 
+This project was developed as part of an AI-assisted software development course.  
+The initial scaffold and real-time backend setup were generated using **Lovable AI**, and then customized and extended manually.
+
+
 ---
 
 ## ✨ Features
