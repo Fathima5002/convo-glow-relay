@@ -1,73 +1,90 @@
-# Welcome to your Lovable project
+# WhatsApp-Style Messaging App
 
-## Project info
+A production-ready, WhatsApp-inspired messaging application built with a focus on clean architecture, real-time interaction, and a polished mobile-first user experience.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The app simulates real-time messaging between two fixed users with independent message states, modern chat features, and a familiar UI.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+### 👥 Users
+- Two fixed users.
+- Each user has:
+  - Their own chat perspective
+  - Independent message state (delete, mark important, etc.)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+### 💬 Messaging
+- Real-time chat updates
+- WhatsApp-style message bubbles
+- Sent / received message differentiation
+- Reply to messages with preview
+- Emoji reactions (shared between users)
+- Message timestamps and delivery status
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### ⭐ Message Management
+- Mark messages as **Important**
+- Delete messages (per user)
+- Clear chat with option to save important messages
+- **Important Messages Vault** for quick access
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+### 📎 Attachments & Media
+- Image uploads
+- File attachments
+- Audio messages
+- Voice recording UI
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 📞 Calls (UI Only)
+- Voice call button
+- Video call button  
+*(UI implemented, no calling functionality)*
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🎨 Design & UX
 
-**Edit a file directly in GitHub**
+Inspired by WhatsApp’s clean and intuitive interface, with a modern twist.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Primary Color:** WhatsApp Green / Emerald (`#25D366`)
+- **Sent Messages:** Light emerald bubbles
+- **Received Messages:** White / soft gray bubbles
+- **Background:** Subtle chat pattern with gradient
+- **Typography:** Inter
+- Smooth transitions and micro-interactions
+- Fully responsive, mobile-first layout
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🛠️ Tech Stack
 
-## What technologies are used for this project?
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **shadcn/ui**
+- **Real-time backend & storage** (cloud-enabled)
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🚀 Getting Started
 
-## How can I deploy this project?
+### Prerequisites
+- Node.js 18+
+- npm
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+### Installation
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+git clone <YOUR_GITHUB_REPO_URL>
+cd <PROJECT_FOLDER>
+npm install
