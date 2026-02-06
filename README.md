@@ -82,9 +82,4 @@ Inspired by WhatsApp’s clean and intuitive interface, with a modern twist.
 
 ---
 
-### Installation
 
-```bash
-git clone <YOUR_GITHUB_REPO_URL>
-cd <PROJECT_FOLDER>
-npm install
